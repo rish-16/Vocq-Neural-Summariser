@@ -25,8 +25,8 @@ logger.setLevel(logging.WARNING)
 df = pd.read_csv('github_issues.csv', encoding='utf-8').sample(n=2000000)
 train_df, test_df = train_test_split(df, test_size=0.10)
 
-print ('Train: {} rows | {} columns'.format(train_df.shape[0], train_df.shape[1]))
-print ('Test: {} rows | {} columns'.format(test_df.shape[0], test_df.shape[1]))
+print ('TRAIN: {} rows | {} columns'.format(train_df.shape[0], train_df.shape[1]))
+print ('TEST: {} rows | {} columns'.format(test_df.shape[0], test_df.shape[1]))
 
 train_body_raw = train_df.body.tolist()
 train_title_raw = train_df.issue_title.tolist()
